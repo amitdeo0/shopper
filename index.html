@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper.com</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            margin-top: 20px;
+        }
+
+        .brand {
+            font-family: arial;
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 50px;
+        }
+
+        .menu a:link {
+            text-decoration: none;
+        }
+
+        .menu a {
+            color: black;
+        }
+
+        .menu span {
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .menu a:hover {
+            color: red;
+        }
+
+        .shortcut span {
+            font-size: 15px;
+            font-family: arial;
+            margin-right: 20px;
+        }
+
+        .shortcut {
+            margin-right: 50px;
+            color: black;
+        }
+
+        .shortcut a:hover {
+            color: red;
+        }
+
+        article {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .women {
+            background-image: url(./public/cover-1.jpg);
+            width: 100%;
+            height: 450px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .men {
+            background-image: url(./public/cover-2.jpg);
+            width: 100%;
+            height: 450px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kids {
+            background-image: url(./public/cover-3.jpg);
+            width: 100%;
+            height: 450px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: arial;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px gray;
+
+        }
+
+        .button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            font-weight: bold;
+            cursor: pointer;
+
+
+
+        }
+
+        .highlight {
+            display: flex;
+            font-family: arial;
+            justify-content: space-evenly;
+
+
+        }
+
+        h4 span {
+            color: red;
+
+        }
+
+        .new_collection {
+            text-align: center;
+            font-family: arial;
+            height: 50px;
+        }
+
+        .new {
+            color: gray;
+            letter-spacing: 1.2;
+        }
+
+        .appear {
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .best {
+            margin-bottom: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            font-size: 2.25rem;
+        }
+
+        .product {
+            /* margin-top: 5%;
+            display: grid;
+            grid-template-columns: 1fr 4fr 6fr 1fr; */
+            display: flex;
+            justify-content: space-around;
+            margin-top: 120px;
+
+
+
+        }
+
+        .product1 {
+            background-image: url(./public/product-1.jpg );
+            width: 30%;
+            height: 400px;
+            /* display: flex; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-left: 100px;
+
+
+
+
+
+
+        }
+
+        .product2 {
+            background-image: url(./public/product-2.jpg);
+            width: 48%;
+            height: 400px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            margin-right: 100px;
+
+
+
+        }
+
+        .product2 div h2 {
+            margin-top: 15%;
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+        .button1 {
+            margin-top: 15%;
+            font-weight: bold;
+            font-family: arial;
+
+        }
+
+        .button2 {
+
+            font-weight: 200;
+            font-family: arial;
+            margin-top: 5%;
+            margin-left: 50px;
+
+        }
+
+
+        .productA {
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+
+        .product3 {
+            background-image: url(./public/product-3.jpg);
+            width: 48%;
+            height: 400px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: black;
+            margin-left: 117px;
+
+
+
+
+
+        }
+
+        .product4 {
+            background-image: url(./public/product-4.jpg);
+            width: 30%;
+            height: 400px;
+            /* display: flex; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-right: 118px;
+
+        }
+
+        .product3 div h2 {
+            margin-top: 103px;
+            margin-left: 50px;
+            font-weight: bold;
+        }
+
+        .top h3 {
+            color: black;
+            text-align: center;
+            font-family: arial;
+            font-size: 35px;
+
+        }
+
+        .wmk {
+            color: black;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .wmk span {
+            padding: 20px;
+            font-weight: bold;
+            font-family: arial;
+        }
+
+        .card_main {
+
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 100px;
+        }
+
+        .card_main1 {
+
+
+            display: flex;
+            justify-items: center;
+            margin-left: 190px;
+
+
+
+        }
+
+        .card {
+            margin-left: 50px;
+        }
+
+        footer {
+            background-color: black;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footerheading h3 {
+            color: white;
+            text-align: center;
+            font-family: arial;
+            font-size: 30px;
+            padding-top: 20px;
+        }
+
+        .hemail {
+            text-align: center;
+
+
+        }
+
+        .hemail input {
+            padding: 18px 76px 21px 102px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            background-color: #8a8585;
+        }
+
+        .hemail button {
+            padding: 23px 55px;
+            font-size: 15px;
+            text-align: center;
+            color: white;
+            background-color: #8a8585;
+        }
+
+        .foorter-main {
+
+            display: flex;
+
+            justify-content: space-between;
+            text-align: center;
+            padding: 50px;
+            border-right: 60px;
+            
+        }
+
+        .foorter-main ul {
+
+            text-decoration: none;
+
+
+        }
+
+        .foorter-main li {
+            color: #8a8585;
+            margin: 10px;
+            text-decoration: none;
+
+
+        }
+
+        span {
+            padding-right: 10px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            Shopper .
+        </div>
+        <div class="menu">
+            <span><a href="">Home</a></span>
+            <span><a href="">Catalog</a></span>
+            <span><a href="">Shop</a></span>
+            <span><a href="">Pages</a></span>
+            <span><a href="">Blog</a></span>
+            <span><a href="">Docs</a></span>
+        </div>
+        <div class="shortcut">
+            <span><a href="" class="bi bi-search"></a></span>
+            <span><a href="" class="bi bi-person"></a></span>
+            <span><a href="" class="bi bi-heart"></a></span>
+            <span><a href="" class="bi bi-cart2"></a></span>
+        </div>
+    </header>
+    <article> <span class="bi bi-lightning-fill"></span> HAPPY HOLIDAY DEALS ON EVERYTHING <span
+            class="bi bi-lightning-fill"></span>
+    </article>
+    <main>
+        <div class="women">
+            <div>
+                <h1>Women</h1>
+                <div class="button">Shop Women <span class="bi bi-arrow-right"></span></div>
+            </div>
+
+        </div>
+        <div class="men">
+            <div>
+                <h1>Men</h1>
+                <div class="button">Shop Men <span class="bi bi-arrow-right"></span></div>
+            </div>
+
+        </div>
+        <div class="kids">
+            <div>
+                <h1>Kids</h1>
+                <div class="button">Shop Kids <span class="bi bi-arrow-right"></span></div>
+            </div>
+
+        </div>
+    </main>
+    <div class="highlight">
+        <div>
+            <h4><span class="bi bi-truck"></span>FREE SHIPPING</h4>
+            <P>From all orders over $100</P>
+
+        </div>
+
+
+
+        <div>
+            <H4><span class="bi bi-arrow-left-right"></span> FREE RETURNS</H4>
+            <p>Return money within 30 days</p>
+
+        </div>
+
+
+
+        <div>
+            <h4><span class="bi bi-lock"></span> SECURE SHOPPING</h4>
+            <p>You're in safe hands</p>
+
+        </div>
+
+
+        <div>
+            <h4><span class="bi bi-tag"></span> OVER 10,000 STYLES</h4>
+            <p>We have everything you need</p>
+
+
+        </div>
+
+    </div>
+
+    <hr style="width:80%;text-align:center;margin-left:10; color:lightgray ;margin-top: 2%; ">
+
+    <div class="new_collection">
+        <div>
+            <h6><span class="new"> NEW COLLECTION </span></h6>
+            <h2 class="Best"> Best Picks 2022</h2>
+            <p class="appear">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast,<br> above fly
+                brought Very green.</p>
+        </div>
+
+    </div>
+
+
+    <div class="product">
+        <div></div>
+        <div class="product1">
+            <div>
+                <div class="Bag" style="margin-top: 103px;">
+                    <font face="arial" size="6" color="white">Bag Collection</font>
+                </div>
+                <span class="botton1">
+                    <div class="button1">Shop now <span class="bi bi-arrow-right"></span></div>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="product2">
+            <div>
+                <h2>
+                    Printed men’s Shirts
+                </h2>
+                <span class="button0">
+                    <div class="button2">Shop now <span class="bi bi-arrow-right"></span></div>
+                </span>
+            </div>
+            <div></div>
+
+
+        </div>
+    </div>
+
+    <div class="productA">
+        <div></div>
+        <div class="product3">
+            <div>
+                <h2> Basic women’s Dresses </h2>
+                <span class="button0">
+                    <div class="button2">Shop now <span class="bi bi-arrow-right"></span></div>
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="product4">
+            <div>
+                <div class="bag" style="margin-top: 103px">
+                    <font face="arial" size="6" color="white">Sweatshirts</font>
+                </div>
+                <span class="botton1">
+                    <div class="button1">Shop now <span class="bi bi-arrow-right"></span></div>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    <div class="top">
+        <h3>Top month Sellers</h3>
+
+    </div>
+    <div class="wmk">
+        <span>Women</span>
+        <span>Men</span>
+        <span>Kids</span>
+    </div>
+
+
+
+    <div class="card_main">
+        <div class="card">
+            <img src="./public/product-5.jpg" alt="" height="300px" width="100%">
+            <p>Shoes</p>
+            <font size="4"> Leather mid-heel Sandals </font>
+            <p>
+                <font size="4" color="gray">$129.00 </font>
+            </p>
+        </div>
+        <div class="card">
+            <img src="./public/product-6.jpg" alt="" height="300px" width="100%">
+            <p>Dresses</p>
+            <font size="4"> Cotton floral print Dress </font>
+            <p>
+                <font size="4" color="gray">$40.00 </font>
+            </p>
+
+        </div>
+        <div class="card">
+            <img src="./public/product-7.jpg" alt="" height="300px" width="100%">
+            <p>Shoes</p>
+            <font size="4"> Leather Sneakers </font>
+            <p>
+                <font size="4" color="gray"><del>$85.00</del> $85.00 </font>
+            </p>
+
+        </div>
+        <div class="card">
+            <img height="300px" width="100%" src="./public/product-8.jpg" alt="">
+            <p>Tops</p>
+            <font size="4"> Cropped cotton Top </font>
+            <p>
+                <font size="4" color="gray">$29.00 </font>
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <div class="card_main1">
+        <div class="card">
+            <img src="./public/product-9.jpg" alt="" height="300px" width="100%">
+            <p>Dresses</p>
+            <font size="4"> Floral print midi Dress </font>
+            <p>
+                <font size="4" color="gray">$50.00 </font>
+            </p>
+        </div>
+        <div class="card">
+            <img src="./public/product-10.jpg" alt="" height="300px" width="100%">
+            <p>Bags </p>
+            <font size="4"> Suede cross body Bag</font>
+            <p>
+                <font size="4" color="gray"><del>$79.00</del> $49.00 </font>
+            </p>
+
+        </div>
+        <div class="card">
+            <img src="./public/product-11.jpg" alt="" height="300px" width="100%">
+            <p>Skirts</p>
+            <font size="4"> Printed A-line Skirt</font>
+            <p>
+                <font size="4" color="gray">$79.00 </font>
+            </p>
+
+        </div>
+        <div class="card">
+            <img height="300px" width="100%" src="./public/product-12.jpg" alt="">
+            <p>Shoes</p>
+            <font size="4"> Heel strappy Sandals </font>
+            <p>
+                <font size="4" color="gray">$90.00</font>
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footerheading">
+            <h3>Want style Ideas and Treats?</h3>
+
+        </div>
+        <div class="hemail">
+            <input type="text" name="email" placeholder="Enter Email *">
+            <button type="submit" class="btn btn-gray-500 btn-lg">Subscribe</button>
+        </div>
+
+        <div class="foorter-main">
+            <div>
+                <font size="7" color="white">shopper .</font>
+                <div class="pic">
+
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-insta"></span>
+                    <span class="bi bi-medium"></span>
+
+                </div>
+            </div>
+
+
+            <div class="support">
+                <ul>
+                    <li>Support</li>
+                    <li>Contact Us</li>
+                    <li>FAQs</li>
+                    <li>Size Guide</li>
+                    <li>Shipping & Returns</li>
+                </ul>
+
+            </div>
+            <div class="SHOP">
+                <ul>
+                    <li>SHOP</li>
+                    <li>Men's Shopping</li>
+                    <li>Women's Shopping</li>
+                    <li>Kids' Shopping</li>
+                    <li>Discounts</li>
+
+                </ul>
+
+            </div>
+            <div class="COMPANY">
+                <ul>
+                    <li>COMPANY</li>
+                    <li>Our Story</li>
+                    <li>Careers</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy & Cookie policy</li>
+                </ul>
+
+            </div>
+            <div class="CONTACT">
+                <div>
+                    <ul>
+                        <li>CONTACT</li>
+                        <li>1-202-555-0105</li>
+                        <li>1-202-555-0106</li>
+                        <li>help@shopper.com</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
